@@ -15,7 +15,7 @@ This repository provides to things:
 ## Old SMA Utility Database Scripts (SMAUtility_PreOpCon20Scripts)
 This folder contains all of the SMAUtility database scripts which were used in releases prior to OpCon 20. These scripts will no longer be distributed as of OpCon 21 but can be downloaded from this repository.
 
-## SMAUtility_OpCon20
+## New SMA Utility Database Scripts (SMAUtility_OpCon20)
 This folder contains the scripts which are used by the new SMAUtilty Schedule. The documentation below provides a command line and a screen shot of each of the Jobs.
 
 ### SMADB_Backup.sql (SMA Database Backup)
