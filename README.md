@@ -59,6 +59,7 @@ The SMA_IndexDefragmentation.sql is called by the SMA Index Defragmentation Job.
 ```
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -b
 ```
+![Database Index Defragmentation](/img/DatabaseIndexDefragment.png)
 
 # Disclaimer
 No Support and No Warranty are provided by SMA Technologies for this project and related material. The use of this project's files is on your own risk.
