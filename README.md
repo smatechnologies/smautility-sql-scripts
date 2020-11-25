@@ -13,41 +13,47 @@ This repo provides to things:
 
 This document provides a description of the OpCon jobs calling the embedded scripts.    
 
-# SMAUtility_PreOpCon20Scripts
+## SMAUtility_PreOpCon20Scripts
 This folder contains all of the SMAUtility database scripts which were used in releases prior to OpCon 20. These scripts will no longer be distributed start with OpCon 21, but will continue to be available in the Innovation Lab. 
 
-# SMAUtility_OpCon20
+## SMAUtility_OpCon20
 This folder contains the scripts which are used by the new SMAUtilty Schedule.
 
-## SMADB_Backup.sql - SMA Database Backup
+### SMADB_Backup.sql (SMA Database Backup)
 The SMADB_Backup.sql is called by the SMA Databse Backup Job. The command line is listed below.
 
 ```
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -h-1 -b
 ```
+![Database Backup](/img/DatabaseBackup.png)
 
-## SMADB_TLog_Backup.sql - SMA Database Transaction Log Backup
+### SMADB_TLog_Backup.sql (SMA Database Transaction Log Backup)
 The SMADB_TLog_Backup.sql is called by the SMA Database Transaction Log Backup Job. The command line is listed below.
 
 ```
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -h-1 -b
 ```
+![Database TLog Backup](/img/DatabaseTlogBackup.png)
 
-## SMA_DBCCMaint.sql - SMA Database Maintenance
+### SMA_DBCCMaint.sql (SMA Database Maintenance)
 The SMA_DBCCMaint.sql is called by the SMA Database Maintenance Job. The command line is listed below.
 
 ```
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]]  -h-1 -b
 ```
 
-## SMA_DBCCIndexDefrag.sql - SMA DBCC Index Defrag
+![Database Maintenance](/img/DatabaseMaintenance.png)
+
+### SMA_DBCCIndexDefrag.sql (SMA DBCC Index Defrag)
 The SMA_DBCCIndexDefrag.sql is called by the SMA DBCC Index Defrag Job. The command line is listed below.
 
 ```
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -b
 ```
 
-## SMA_IndexDefragmentation.sql - SMA Index Defragmentation
+![Database DBCC Index](/img/DatabaseDBCCIndex.png)
+
+### SMA_IndexDefragmentation.sql (SMA Index Defragmentation)
 The SMA_IndexDefragmentation.sql is called by the SMA Index Defragmentation Job. The command line is listed below.
 
 ```
