@@ -25,7 +25,7 @@ The SMADB_Backup.sql is called by the SMA Databse Backup Job. The command line i
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -h-1 -b
 ```
 
-This screenshot shows the Job running in an OpCon container. The Job will look exactly the same if run on Windows other than the "Runner" will provide the windows instead of Linux path.
+The screenshot below shows the Job running in an OpCon container. The Job will look exactly the same if run on Windows other than the "Runner" will provide the windows path instead of Linux path.
 ![Database Backup](/img/DatabaseBackup.png)
 
 ### SMADB_TLog_Backup.sql (SMA Database Transaction Log Backup)
@@ -35,7 +35,7 @@ The SMADB_TLog_Backup.sql is called by the SMA Database Transaction Log Backup J
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -h-1 -b
 ```
 
-This screenshot shows the Job running in an OpCon container. The Job will look exactly the same if run on Windows other than the "Runner" will provide the windows instead of Linux path.
+The screenshot below shows the Job running in an OpCon container. The Job will look exactly the same if run on Windows other than the "Runner" will provide the windows path instead of Linux path.
 ![Database TLog Backup](/img/DatabaseTlogBackup.png)
 
 ### SMA_DBCCMaint.sql (SMA Database Maintenance)
@@ -45,7 +45,7 @@ The SMA_DBCCMaint.sql is called by the SMA Database Maintenance Job. The command
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]]  -h-1 -b
 ```
 
-This screenshot shows the Job running in an OpCon container. The Job will look exactly the same if run on Windows other than the "Runner" will provide the windows instead of Linux path.
+The screenshot below shows the Job running in an OpCon container. The Job will look exactly the same if run on Windows other than the "Runner" will provide the windows path instead of Linux path.
 ![Database Maintenance](/img/DatabaseMaintenance.png)
 
 ### SMA_DBCCIndexDefrag.sql (SMA DBCC Index Defrag)
@@ -55,7 +55,7 @@ The SMA_DBCCIndexDefrag.sql is called by the SMA DBCC Index Defrag Job. The comm
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -b
 ```
 
-This screenshot shows the Job running in an OpCon container. The Job will look exactly the same if run on Windows other than the "Runner" will provide the windows instead of Linux path.
+The screenshot below shows the Job running in an OpCon container. The Job will look exactly the same if run on Windows other than the "Runner" will provide the windows path instead of Linux path.
 ![Database DBCC Index](/img/DatabaseDBCCIndex.png)
 
 ### SMA_IndexDefragmentation.sql (SMA Index Defragmentation)
@@ -65,7 +65,7 @@ The SMA_IndexDefragmentation.sql is called by the SMA Index Defragmentation Job.
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -b
 ```
 
-This screenshot shows the Job running in an OpCon container. The Job will look exactly the same if run on Windows other than the "Runner" will provide the windows instead of Linux path.
+The screenshot below shows the Job running in an OpCon container. The Job will look exactly the same if run on Windows other than the "Runner" will provide the windows path instead of Linux path.
 ![Database Index Defragmentation](/img/DatabaseIndexDefragment.png)
 
 # Disclaimer
