@@ -16,7 +16,7 @@ This repository provides two things:
 The **SMAUtility_PreOpCon20Scripts** folder contains all of the SMAUtility database scripts which were used in releases prior to OpCon 20. These scripts will no longer be distributed as of OpCon 21 but can be downloaded from this repository.
 
 ## New SMA Utility Database Scripts
-This **SMAUtility_OpCon20** folder contains the scripts which are used by the new SMAUtilty Schedule. The documentation below provides a command line and a screen shot of each of the Jobs.
+The **SMAUtility_OpCon20** folder contains the scripts which are used by the new SMAUtilty Schedule. The documentation below provides a command line and a screen shot of each of the Jobs.
 
 **Note:** The Script Type and Script Runner must be created before updating your Jobs to use Embedded Scripts.
 
