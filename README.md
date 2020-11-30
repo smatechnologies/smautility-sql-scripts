@@ -20,12 +20,12 @@ This **SMAUtility_OpCon20** folder contains the scripts which are used by the ne
 
 **Note:** The Script Type and Script Runner must be created before updating your Jobs to use Embedded Scripts.
 
-#### Create the Script Type
+### Create the Script Type
 The SQL Script Type was not created automatically unless the new SMAUtiltiy Schedule was loaded. You will need to create a script type which looks similar to the image below. 
 
 ![SQL Script Type](/img/ScriptType.PNG)
 
-#### Create the Script Runner
+### Create the Script Runner
 The SQL Script Runner was not created automatically unless the new SMAUtiltiy Schedule was loaded.
  
 Script Runner if running OpCon on Windows:
@@ -44,6 +44,7 @@ The SMADB_Backup.sql is called by the SMA Databse Backup Job. The command line i
 ![Database Backup](/img/DatabaseBackup.png)
 
 **Note:** The Runner will be slightly different depending on whether OpCon is running on Windows or Docker/Linux. If it is run on Windows it will look like this:
+
 ![Database Backup Runner](/img/WindowsRunner.PNG)
 
 ### SMADB_TLog_Backup.sql (SMA Database Transaction Log Backup)
@@ -56,6 +57,7 @@ The SMADB_TLog_Backup.sql is called by the SMA Database Transaction Log Backup J
 ![Database TLog Backup](/img/DatabaseTlogBackup.png)
 
 **Note:** The Runner will be slightly different depending on whether OpCon is running on Windows or Docker/Linux. If it is run on Windows it will look like this:
+
 ![Database Tlog Backup Runner](/img/WindowsRunner.PNG)
 
 ### SMA_DBCCMaint.sql (SMA Database Maintenance)
@@ -68,6 +70,7 @@ The SMA_DBCCMaint.sql is called by the SMA Database Maintenance Job. The command
 ![Database Maintenance](/img/DatabaseMaintenance.png)
 
 **Note:** The Runner will be slightly different depending on whether OpCon is running on Windows or Docker/Linux. If it is run on Windows it will look like this:
+
 ![Database Maintenance Runner](/img/WindowsRunner.PNG)
 
 ### SMA_DBCCIndexDefrag.sql (SMA DBCC Index Defrag)
@@ -80,6 +83,7 @@ The SMA_DBCCIndexDefrag.sql is called by the SMA DBCC Index Defrag Job. The comm
 ![Database DBCC Index](/img/DatabaseDBCCIndex.png)
 
 **Note:** The Runner will be slightly different depending on whether OpCon is running on Windows or Docker/Linux. If it is run on Windows it will look like this:
+
 ![Database DBCC Index Runner](/img/WindowsRunner.PNG)
 
 ### SMA_IndexDefragmentation.sql (SMA Index Defragmentation)
@@ -92,6 +96,7 @@ The SMA_IndexDefragmentation.sql is called by the SMA Index Defragmentation Job.
 ![Database Index Defragmentation](/img/DatabaseIndexDefragment.png)
 
 **Note:** The Runner will be slightly different depending on whether OpCon is running on Windows or Docker/Linux. If it is run on Windows it will look like this:
+
 ![Database Index Degragment Runner](/img/WindowsRunner.PNG)
 
 # Disclaimer
