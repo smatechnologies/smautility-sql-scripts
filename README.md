@@ -23,16 +23,16 @@ This **SMAUtility_OpCon20** folder contains the scripts which are used by the ne
 #### Create the Script Type
 The SQL Script Type was not created automatically unless the new SMAUtiltiy Schedule was loaded. You will need to create a script type which looks similar to the image below. 
 
-![SQL Script Type](/img/ScriptType.PGN)
+![SQL Script Type](/img/ScriptType.PNG)
 
 #### Create the Script Runner
 The SQL Script Runner was not created automatically unless the new SMAUtiltiy Schedule was loaded.
  
 Script Runner if running OpCon on Windows:
-![SQL Script Runner Windows](/img/ScriptRunnerWindows.PGN)
+![SQL Script Runner Windows](/img/ScriptRunnerWindows.PNG)
 
 Script Runner if running OpCon on Docker (Linux):
-![SQL Script Runner Linux](/img/ScriptRunnerLinux.PGN)
+![SQL Script Runner Linux](/img/ScriptRunnerLinux.PNG)
 
 ### SMADB_Backup.sql (SMA Database Backup)
 The SMADB_Backup.sql is called by the SMA Databse Backup Job. The command line is listed below.
@@ -41,7 +41,7 @@ The SMADB_Backup.sql is called by the SMA Databse Backup Job. The command line i
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -h-1 -b
 ```
 
-The screenshot below shows the Job running in an OpCon container. The Job will look exactly the same if run on Windows other than the "Runner" will provide the windows path instead of Linux path. ![Windows Runner](/img/WindowsRunner.PGN)
+The screenshot below shows the Job running in an OpCon container. The Job will look exactly the same if run on Windows other than the "Runner" will provide the windows path instead of Linux path. ![Windows Runner](/img/WindowsRunner.PNG)
 ![Database Backup](/img/DatabaseBackup.png)
 
 ### SMADB_TLog_Backup.sql (SMA Database Transaction Log Backup)
