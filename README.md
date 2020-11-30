@@ -7,9 +7,9 @@ The SMAUtility Schedule is a Schedule which is normally put in place when OpCon 
 
 During the release of OpCon 20 the SMAUtility Schedule's database Jobs were modified to use Embedded Scripts instead of scripts which reside on the OpCon server. This made the login credentials more secure and provided a better user experience for new users. All new OpCon environments use the newer SMAUtility Schedule, but existing SMAUtility Schedules were not modified during the upgrade.
 
-This repository provides to things:
-1. The old SMAUtility database scripts. The older scripts will no longer be distributed with OpCon as of OpCon 21. If you prefer the older scrips to the embedded scripts you can pull the old scripts from this repository. 
-2. The new SMAUtility database scripts. The OpCon database upgrade scripts do not modify existing SMAUtility Schedules. The new scripts as well as brief documentation on how to set them up can be found within this repository.
+This repository provides two things:
+1. **The old SMAUtility database scripts.** The older scripts will no longer be distributed with OpCon as of OpCon 21. If you prefer the older scrips to the embedded scripts you can pull the old scripts from this repository. 
+2. **The new SMAUtility database scripts.** The OpCon database upgrade scripts do not modify existing SMAUtility Schedules. The new scripts as well as brief documentation on how to set them up can be found within this repository.
   
 
 ## Old SMA Utility Database Scripts
