@@ -28,11 +28,19 @@ The SQL Script Type was not created automatically unless the new SMAUtiltiy Sche
 ### Create the Script Runner
 The SQL Script Runner was not created automatically unless the new SMAUtiltiy Schedule was loaded.
  
-Script Runner if running OpCon on Windows:
+**Script Runner if running OpCon on Windows:**
 ![SQL Script Runner Windows](/img/ScriptRunnerWindows.PNG)
 
-Script Runner if running OpCon on Docker (Linux):
+```
+sqlcmd -i $FILE $ARGUMENTS
+```
+
+**Script Runner if running OpCon on Docker (Linux):**
 ![SQL Script Runner Linux](/img/ScriptRunnerLinux.PNG)
+
+```
+/opt/mssql-tools/bin/sqlcmd -i $FILE $ARGUMENTS
+```
 
 ### SMADB_Backup.sql (SMA Database Backup)
 The SMADB_Backup.sql is called by the SMA Databse Backup Job. The command line is listed below.
