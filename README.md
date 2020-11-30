@@ -41,8 +41,10 @@ The SMADB_Backup.sql is called by the SMA Databse Backup Job. The command line i
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -h-1 -b
 ```
 
-The screenshot below shows the Job running in an OpCon container. The Job will look exactly the same if run on Windows other than the "Runner" will provide the windows path instead of Linux path. ![Windows Runner](/img/WindowsRunner.PNG)
 ![Database Backup](/img/DatabaseBackup.png)
+
+**Note:** The Runner will be slightly different depending on whether OpCon is running on Windows or Docker/Linux. If it is run on Windows it will look like this:
+![Database Backup Runner](/img/WindowsRunner.PNG)
 
 ### SMADB_TLog_Backup.sql (SMA Database Transaction Log Backup)
 The SMADB_TLog_Backup.sql is called by the SMA Database Transaction Log Backup Job. The command line is listed below.
@@ -51,8 +53,10 @@ The SMADB_TLog_Backup.sql is called by the SMA Database Transaction Log Backup J
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -h-1 -b
 ```
 
-The screenshot below shows the Job running in an OpCon container. The Job will look exactly the same if run on Windows other than the "Runner" will provide the windows path instead of Linux path.
 ![Database TLog Backup](/img/DatabaseTlogBackup.png)
+
+**Note:** The Runner will be slightly different depending on whether OpCon is running on Windows or Docker/Linux. If it is run on Windows it will look like this:
+![Database Tlog Backup Runner](/img/WindowsRunner.PNG)
 
 ### SMA_DBCCMaint.sql (SMA Database Maintenance)
 The SMA_DBCCMaint.sql is called by the SMA Database Maintenance Job. The command line is listed below.
@@ -61,8 +65,10 @@ The SMA_DBCCMaint.sql is called by the SMA Database Maintenance Job. The command
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]]  -h-1 -b
 ```
 
-The screenshot below shows the Job running in an OpCon container. The Job will look exactly the same if run on Windows other than the "Runner" will provide the windows path instead of Linux path.
 ![Database Maintenance](/img/DatabaseMaintenance.png)
+
+**Note:** The Runner will be slightly different depending on whether OpCon is running on Windows or Docker/Linux. If it is run on Windows it will look like this:
+![Database Maintenance Runner](/img/WindowsRunner.PNG)
 
 ### SMA_DBCCIndexDefrag.sql (SMA DBCC Index Defrag)
 The SMA_DBCCIndexDefrag.sql is called by the SMA DBCC Index Defrag Job. The command line is listed below.
@@ -71,8 +77,10 @@ The SMA_DBCCIndexDefrag.sql is called by the SMA DBCC Index Defrag Job. The comm
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -b
 ```
 
-The screenshot below shows the Job running in an OpCon container. The Job will look exactly the same if run on Windows other than the "Runner" will provide the windows path instead of Linux path.
 ![Database DBCC Index](/img/DatabaseDBCCIndex.png)
+
+**Note:** The Runner will be slightly different depending on whether OpCon is running on Windows or Docker/Linux. If it is run on Windows it will look like this:
+![Database DBCC Index Runner](/img/WindowsRunner.PNG)
 
 ### SMA_IndexDefragmentation.sql (SMA Index Defragmentation)
 The SMA_IndexDefragmentation.sql is called by the SMA Index Defragmentation Job. The command line is listed below.
@@ -81,8 +89,10 @@ The SMA_IndexDefragmentation.sql is called by the SMA Index Defragmentation Job.
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -b
 ```
 
-The screenshot below shows the Job running in an OpCon container. The Job will look exactly the same if run on Windows other than the "Runner" will provide the windows path instead of Linux path.
 ![Database Index Defragmentation](/img/DatabaseIndexDefragment.png)
+
+**Note:** The Runner will be slightly different depending on whether OpCon is running on Windows or Docker/Linux. If it is run on Windows it will look like this:
+![Database Index Degragment Runner](/img/WindowsRunner.PNG)
 
 # Disclaimer
 No Support and No Warranty are provided by SMA Technologies for this project and related material. The use of this project's files is on your own risk.
