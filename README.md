@@ -45,25 +45,25 @@ sqlcmd -i $FILE $ARGUMENTS
 ### Job Environment Variables
 The parameters which were formerly stored in the **SMA_SetDBEnvironmentScriptingVariables.cmd** and **SMA_SetDBMaintenanceScriptingVariables.cmd** files are now stored as Environment Variables within each OpCon Job. There is an Environment Variables tab in the Job definition underneath the Command Line or Parameters. The following Environment Variables need to be added:
 1. SQLScriptOutputDirectory
-  * _Example_ C:\ProgramData\OpConxps\Utilities\Database\Log\
+  * <ins>Example</ins> C:\ProgramData\OpConxps\Utilities\Database\Log\
 2. PathToFullBackupFile
-  * _Example_ C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Backup\SMADB_Backup.bak
+  * <ins>Example</ins> C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Backup\SMADB_Backup.bak
 3. PathToTranLogBackupFile
-  * _Example_ C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Backup\SMATLog_Backup.bak
+  * <ins>Example</ins> C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Backup\SMATLog_Backup.bak
 4. FullBackupFilename
-  * _Example_ SMADB_Backup.bak
+  * <ins>Example</ins> SMADB_Backup.bak
 5. TranLogBackupFilename
-  * _Example_ SMATLog_Backup.bak
+  * <ins>Example</ins> SMATLog_Backup.bak
 6. PathToSystemDBBackupFile
-  * _Example_ C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Backup\SystemDB_Backup.bak
+  * <ins>Example</ins> C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Backup\SystemDB_Backup.bak
 7. SystemDBBackupFilename
-  * _Example_ SystemDB_Backup.bak
+  * <ins>Example</ins> SystemDB_Backup.bak
 8. PATH
-  * _Example_ C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn
+  * <ins>Example</ins> C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn
 9. DB_SERVER_NAME
-  * _Example_ hostname
+  * <ins>Example</ins> hostname
 10. DatabaseName
-  * _Example_ OPCONXPS
+  * <ins>Example</ins> OPCONXPS
 
 ![Environment Variables](/img/EnvironmentVariables.PNG)
 
