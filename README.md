@@ -67,7 +67,7 @@ The parameters which were formerly stored in the **SMA_SetDBEnvironmentScripting
     * <ins>Example</ins>: C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Backup\SMATLog_Backup.bak
     * <ins>Global Property</ins> [[PathToTranBackupFile]] is recommended for the value.
 3. (Optional) SQLScriptOutputDirectory = 
-    * ins>Example</ins>: C:\ProgramData\OpConxps\Utilities\Database\Log\
+    * <ins>Example</ins>: C:\ProgramData\OpConxps\Utilities\Database\Log\
     * <ins>Note</ins>: If omitted the default SQL output directory will be used. 
 4. (Optional) PATH
     * <ins>Note</ins>: This lists the path to the sqlcmd program. It is generally loaded into the Windows Environmental Variables by default when it is installed. 
