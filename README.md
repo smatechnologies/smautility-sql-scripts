@@ -42,6 +42,38 @@ sqlcmd -i $FILE $ARGUMENTS
 /opt/mssql-tools/bin/sqlcmd -i $FILE $ARGUMENTS
 ```
 
+### Job Environment Variables
+The parameters which were formerly stored in the **SMA_SetDBEnvironmentScriptingVariables.cmd** and **SMA_SetDBMaintenanceScriptingVariables.cmd** files are now stored as Environment Variables within each OpCon Job. There is an Environment Variables tab in the Job definition underneath the Command Line or Parameters. The following Environment Variables need to be added:
+1. SQLScriptOutputDirectory
+  * _Example_ C:\ProgramData\OpConxps\Utilities\Database\Log\
+2. PathToFullBackupFile
+  * _Example_ C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Backup\SMADB_Backup.bak
+3. PathToTranLogBackupFile
+  * _Example_ C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Backup\SMATLog_Backup.bak
+4. FullBackupFilename
+  * _Example_ SMADB_Backup.bak
+5. TranLogBackupFilename
+  * _Example_ SMATLog_Backup.bak
+6. PathToSystemDBBackupFile
+  * _Example_ C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Backup\SystemDB_Backup.bak
+7. SystemDBBackupFilename
+  * _Example_ SystemDB_Backup.bak
+8. PATH
+  * _Example_ C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn
+9. DB_SERVER_NAME
+  * _Example_ hostname
+10. DatabaseName
+  * _Example_ OPCONXPS
+
+![Environment Variables](/img/EnvironmentVariables.PNG)
+
+### Global Properties
+A few Global Properties are referenced by the Jobs and need to be created.
+1. DB_SERVER_NAME
+2. SQLMaintUser
+3. SQLMaintPassword
+  * We recommend encrypting this Global Property.
+
 ### SMADB_Backup.sql (SMA Database Backup)
 The SMADB_Backup.sql is called by the SMA Databse Backup Job. The command line is listed below.
 
