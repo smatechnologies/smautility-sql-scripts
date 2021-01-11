@@ -53,35 +53,27 @@ A few Global Properties are referenced by the new Jobs. These need to be created
 4. SQLMaintPassword 
     * <ins>Note</ins>: We recommend encrypting this Global Property)
 5. PathToFullBackupFile
-    * <ins>Example</ins>: C:\ProgramData\OpConxps\Utilities\Database\Log\
+    * <ins>Example</ins>: C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Backup\SMADB_Backup.bak
 6. PathToTranLogBackupFile
     * <ins>Example</ins>: C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Backup\SMATLog_Backup.bak
 
-### Job Environment Variables
-The parameters which were formerly stored in the **SMA_SetDBEnvironmentScriptingVariables.cmd** and **SMA_SetDBMaintenanceScriptingVariables.cmd** files need to be placed in the servers's Environmental Variables or added to the Environment Variables within each OpCon Job. To add them to the OpCon Job click the Environmental Varialbes tab in the Job definition underneath the Command Line or Parameters. The following Environment Variables need to be added:
 
-1. PathToFullBackupFile
-    * <ins>Example</ins>: C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Backup\SMADB_Backup.bak
-    * <ins>Global Property</ins> [[PathToFullBackupFile]] is recommended for the value.
-2. PathToTranLogBackupFile
-    * <ins>Example</ins>: C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Backup\SMATLog_Backup.bak
-    * <ins>Global Property</ins> [[PathToTranBackupFile]] is recommended for the value.
-3. (Optional) SQLScriptOutputDirectory = 
-    * <ins>Example</ins>: C:\ProgramData\OpConxps\Utilities\Database\Log\
-    * <ins>Note</ins>: If omitted the default SQL output directory will be used. 
-4. (Optional) PATH
-    * <ins>Note</ins>: This lists the path to the sqlcmd program. It is generally loaded into the Windows Environmental Variables by default when it is installed. 
-    * <ins>Example</ins>: C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn
-
-
-![Environment Variables](/img/EnvironmentVariables.PNG)
-
-### SMADB_Backup.sql (SMA Database Backup)
+### SMA Database Backup (SMADB_Backup.sql)
 The SMADB_Backup.sql is called by the SMA Databse Backup Job. The command line is listed below.
 
 ```
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -h-1 -b
 ```
+
+##### Job Environment Variables for SMA Database Backup
+Three environment variables are required for the SMA Database Backup Job. 
+
+1. DatabaseName
+    * <ins>Global Property</ins> [[DatabaseName]] is recommended for the value.
+2. PathToFullBackupFile
+    * <ins>Global Property</ins> [[PathToFullBackupFile]] is recommended for the value.
+3. PathToTranLogBackupFile
+    * <ins>Global Property</ins> [[PathToTranLogBackupFile]] is recommended for the value.
 
 ![Database Backup](/img/DatabaseBackup.png)
 
@@ -89,12 +81,20 @@ The SMADB_Backup.sql is called by the SMA Databse Backup Job. The command line i
 
 ![Database Backup Runner](/img/WindowsRunner.PNG)
 
-### SMADB_TLog_Backup.sql (SMA Database Transaction Log Backup)
+### SMA Database Transaction Log Backup (SMADB_TLog_Backup.sql)
 The SMADB_TLog_Backup.sql is called by the SMA Database Transaction Log Backup Job. The command line is listed below.
 
 ```
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -h-1 -b
 ```
+
+##### Job Environment Variables for SMA Database Transaction Log Backup
+Two environment variables are required for the SMA Database Transaction Log Backup Job. 
+
+1. DatabaseName
+    * <ins>Global Property</ins> [[DatabaseName]] is recommended for the value.
+2. PathToTranLogBackupFile
+    * <ins>Global Property</ins> [[PathToTranLogBackupFile]] is recommended for the value.
 
 ![Database TLog Backup](/img/DatabaseTlogBackup.png)
 
@@ -102,12 +102,18 @@ The SMADB_TLog_Backup.sql is called by the SMA Database Transaction Log Backup J
 
 ![Database Tlog Backup Runner](/img/WindowsRunner.PNG)
 
-### SMA_DBCCMaint.sql (SMA Database Maintenance)
+### SMA Database Maintenance (SMA_DBCCMaint.sql)
 The SMA_DBCCMaint.sql is called by the SMA Database Maintenance Job. The command line is listed below.
 
 ```
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]]  -h-1 -b
 ```
+
+##### Job Environment Variables for SMA Database Maintenance
+Only one environment variable is required for the SMA Database Maintenance Job. 
+
+1. DatabaseName
+    * <ins>Global Property</ins> [[DatabaseName]] is recommended for the value.
 
 ![Database Maintenance](/img/DatabaseMaintenance.png)
 
@@ -115,12 +121,18 @@ The SMA_DBCCMaint.sql is called by the SMA Database Maintenance Job. The command
 
 ![Database Maintenance Runner](/img/WindowsRunner.PNG)
 
-### SMA_DBCCIndexDefrag.sql (SMA DBCC Index Defrag)
+### SMA DBCC Index Defrag (SMA_DBCCIndexDefrag.sql)
 The SMA_DBCCIndexDefrag.sql is called by the SMA DBCC Index Defrag Job. The command line is listed below.
 
 ```
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -b
 ```
+
+##### Job Environment Variables for SMA DBCC Index Defrag
+Only one environment variable is required for the SMA DBCC Index Defrag Job. 
+
+1. DatabaseName
+    * <ins>Global Property</ins> [[DatabaseName]] is recommended for the value.
 
 ![Database DBCC Index](/img/DatabaseDBCCIndex.png)
 
@@ -128,18 +140,37 @@ The SMA_DBCCIndexDefrag.sql is called by the SMA DBCC Index Defrag Job. The comm
 
 ![Database DBCC Index Runner](/img/WindowsRunner.PNG)
 
-### SMA_IndexDefragmentation.sql (SMA Index Defragmentation)
+### SMA Index Defragmentation (SMA_IndexDefragmentation.sql)
 The SMA_IndexDefragmentation.sql is called by the SMA Index Defragmentation Job. The command line is listed below.
 
 ```
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -b
 ```
 
+##### Job Environment Variables for SMA Index Defragmentation
+Only one environment variable is required for the SMA Index Defragmentation Job. 
+
+1. DatabaseName
+    * <ins>Global Property</ins> [[DatabaseName]] is recommended for the value.
+
 ![Database Index Defragmentation](/img/DatabaseIndexDefragment.png)
 
 **Note:** The Runner will be slightly different depending on whether OpCon is running on Windows or Docker/Linux. If it is run on Windows it will look like this:
 
 ![Database Index Degragment Runner](/img/WindowsRunner.PNG)
+
+### SMA Job Average
+It is recommended to replace this Job by the Server Option **SAM Calculates Job Averages**. As long as this value is set to True the Job Average will automatically be calculated.
+
+![Job Average Server Option](/img/JobAverageServerOption.PNG)
+
+If you prefer to continue to run the Job you can do so by executing the following command. No script is needed for this Job.
+
+```
+sqlcmd -S[[DB_SERVER_NAME]] -U[[SqlMaintUser]] -P[[SqlMaintPassword]] -Q"exec [[DatabaseName]].dbo.SMA_JOBAVG"
+```
+
+![Job Average](/img/JobAverage.PNG)
 
 # Disclaimer
 No Support and No Warranty are provided by SMA Technologies for this project and related material. The use of this project's files is on your own risk.
