@@ -59,10 +59,17 @@ A few Global Properties are referenced by the new Jobs. These need to be created
 
 
 ### SMA Database Backup (SMADB_Backup.sql)
-The SMADB_Backup.sql is called by the SMA Databse Backup Job. The command line is listed below.
+The SMADB_Backup.sql is called by the SMA Databse Backup Job. The command line is listed below for SQL Authentication.
 
 ```
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -h-1 -b
+```
+
+The SMADB_Backup.sql is called by the SMA Databse Backup Job. The command line is listed below for Windows Authentication.
+Note: The Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL premissions for the Database.
+
+```
+-S [[DB_SERVER_NAME]] -h-1 -b
 ```
 
 ##### Job Environment Variables for SMA Database Backup
@@ -82,10 +89,17 @@ Three environment variables are required for the SMA Database Backup Job.
 ![Database Backup Runner](/img/WindowsRunner.PNG)
 
 ### SMA Database Transaction Log Backup (SMADB_TLog_Backup.sql)
-The SMADB_TLog_Backup.sql is called by the SMA Database Transaction Log Backup Job. The command line is listed below.
+The SMADB_TLog_Backup.sql is called by the SMA Database Transaction Log Backup Job. The command line is listed below for SQL Authentication.
 
 ```
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -h-1 -b
+```
+
+The SMADB_TLog_Backup.sql is called by the SMA Database Transaction Log Backup Job. The command line is listed below for Windows Authentication.
+Note: The Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL premissions for the Database.
+
+```.
+-S [[DB_SERVER_NAME]] -h-1 -b
 ```
 
 ##### Job Environment Variables for SMA Database Transaction Log Backup
@@ -103,10 +117,17 @@ Two environment variables are required for the SMA Database Transaction Log Back
 ![Database Tlog Backup Runner](/img/WindowsRunner.PNG)
 
 ### SMA Database Maintenance (SMA_DBCCMaint.sql)
-The SMA_DBCCMaint.sql is called by the SMA Database Maintenance Job. The command line is listed below.
+The SMA_DBCCMaint.sql is called by the SMA Database Maintenance Job. The command line is listed below for SQL Authentication.
 
 ```
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]]  -h-1 -b
+```
+
+The SMA_DBCCMaint.sql is called by the SMA Database Maintenance Job. The command line is listed below for Windows Authentication.
+Note: The Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL premissions for the Database.
+
+```
+-S [[DB_SERVER_NAME]] -h-1 -b
 ```
 
 ##### Job Environment Variables for SMA Database Maintenance
@@ -122,10 +143,17 @@ Only one environment variable is required for the SMA Database Maintenance Job.
 ![Database Maintenance Runner](/img/WindowsRunner.PNG)
 
 ### SMA DBCC Index Defrag (SMA_DBCCIndexDefrag.sql)
-The SMA_DBCCIndexDefrag.sql is called by the SMA DBCC Index Defrag Job. The command line is listed below.
+The SMA_DBCCIndexDefrag.sql is called by the SMA DBCC Index Defrag Job. The command line is listed below for SQL Authentication.
 
 ```
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -b
+```
+
+The SMA_DBCCIndexDefrag.sql is called by the SMA DBCC Index Defrag Job. The command line is listed below for Windows Authentication.
+Note: The Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL premissions for the Database.
+
+```
+-S [[DB_SERVER_NAME]] -b
 ```
 
 ##### Job Environment Variables for SMA DBCC Index Defrag
@@ -141,10 +169,17 @@ Only one environment variable is required for the SMA DBCC Index Defrag Job.
 ![Database DBCC Index Runner](/img/WindowsRunner.PNG)
 
 ### SMA Index Defragmentation (SMA_IndexDefragmentation.sql)
-The SMA_IndexDefragmentation.sql is called by the SMA Index Defragmentation Job. The command line is listed below.
+The SMA_IndexDefragmentation.sql is called by the SMA Index Defragmentation Job. The command line is listed below for SQL Authentication.
 
 ```
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -b
+```
+
+The SMA_IndexDefragmentation.sql is called by the SMA Index Defragmentation Job. The command line is listed below for Windows Authentication.
+Note: The Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL premissions for the Database.
+
+```
+-S [[DB_SERVER_NAME]] -b
 ```
 
 ##### Job Environment Variables for SMA Index Defragmentation
@@ -164,10 +199,16 @@ It is recommended to replace this Job by the Server Option **SAM Calculates Job 
 
 ![Job Average Server Option](/img/JobAverageServerOption.PNG)
 
-If you prefer to continue to run the Job you can do so by executing the following command. No script is needed for this Job.
+If you prefer to continue to run the Job you can do so by executing the following command. No script is needed for this Job. The command line is listed below for SQL Authentication.
 
 ```
 sqlcmd -S[[DB_SERVER_NAME]] -U[[SqlMaintUser]] -P[[SqlMaintPassword]] -Q"exec [[DatabaseName]].dbo.SMA_JOBAVG"
+```
+
+The command line is listed below for Windows Authentication.
+Note: The Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL premissions for the Database.
+```
+sqlcmd -S[[DB_SERVER_NAME]] -Q"exec [[DatabaseName]].dbo.SMA_JOBAVG"
 ```
 
 ![Job Average](/img/JobAverage.PNG)
