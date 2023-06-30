@@ -57,6 +57,7 @@ A few Global Properties are referenced by the new Jobs. These need to be created
 6. PathToTranLogBackupFile
     * <ins>Example</ins>: C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Backup\SMATLog_Backup.bak
 
+---
 
 ### SMA Check Identity Limit (SMA_CheckIdentityLimit.sql)
 The SMA_CheckIdentityLimit.sql is called by the SMA Check Identity Limit Job. The command line is listed below for SQL Authentication.
@@ -65,14 +66,9 @@ The SMA_CheckIdentityLimit.sql is called by the SMA Check Identity Limit Job. Th
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -d [[DatabaseName]] -h-1 -b
 ```
 
-The SMADB_Backup.sql is called by the SMA Databse Backup Job. The command line is listed below for Windows Authentication.
-Note: The Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL premissions for the Database.
+Note: For Windows Authentication, the Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL premissions for the Database.
 
-```
--S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -d [[DatabaseName]] -h-1 -b
-```
-
-##### Job Environment Variables for SMA Database Backup
+##### Job Environment Variables for SMA Check Identity Limit
 Three environment variables are required for the SMA Database Backup Job. 
 
 1. DatabaseName
@@ -84,6 +80,7 @@ Three environment variables are required for the SMA Database Backup Job.
 
 ![Database Backup Runner](/img/WindowsRunner.PNG)
 
+---
 
 ### SMA Database Backup (SMADB_Backup.sql)
 The SMADB_Backup.sql is called by the SMA Databse Backup Job. The command line is listed below for SQL Authentication.
@@ -115,6 +112,8 @@ Three environment variables are required for the SMA Database Backup Job.
 
 ![Database Backup Runner](/img/WindowsRunner.PNG)
 
+---
+
 ### SMA Database Transaction Log Backup (SMADB_TLog_Backup.sql)
 The SMADB_TLog_Backup.sql is called by the SMA Database Transaction Log Backup Job. The command line is listed below for SQL Authentication.
 
@@ -143,6 +142,8 @@ Two environment variables are required for the SMA Database Transaction Log Back
 
 ![Database Tlog Backup Runner](/img/WindowsRunner.PNG)
 
+---
+
 ### SMA Database Maintenance (SMA_DBCCMaint.sql)
 The SMA_DBCCMaint.sql is called by the SMA Database Maintenance Job. The command line is listed below for SQL Authentication.
 
@@ -168,6 +169,8 @@ Only one environment variable is required for the SMA Database Maintenance Job.
 **Note:** The Runner will be slightly different depending on whether OpCon is running on Windows or Docker/Linux. If it is run on Windows it will look like this:
 
 ![Database Maintenance Runner](/img/WindowsRunner.PNG)
+
+---
 
 ### SMA DBCC Index Defrag (SMA_DBCCIndexDefrag.sql)
 The SMA_DBCCIndexDefrag.sql is called by the SMA DBCC Index Defrag Job. The command line is listed below for SQL Authentication.
@@ -195,6 +198,8 @@ Only one environment variable is required for the SMA DBCC Index Defrag Job.
 
 ![Database DBCC Index Runner](/img/WindowsRunner.PNG)
 
+---
+
 ### SMA Index Defragmentation (SMA_IndexDefragmentation.sql)
 The SMA_IndexDefragmentation.sql is called by the SMA Index Defragmentation Job. The command line is listed below for SQL Authentication.
 
@@ -221,6 +226,8 @@ Only one environment variable is required for the SMA Index Defragmentation Job.
 
 ![Database Index Degragment Runner](/img/WindowsRunner.PNG)
 
+---
+
 ### SMA Job Average
 It is recommended to replace this Job by the Server Option **SAM Calculates Job Averages**. As long as this value is set to True the Job Average will automatically be calculated.
 
@@ -239,6 +246,8 @@ sqlcmd -S[[DB_SERVER_NAME]] -Q"exec [[DatabaseName]].dbo.SMA_JOBAVG"
 ```
 
 ![Job Average](/img/JobAverage.PNG)
+
+---
 
 # Disclaimer
 No Support and No Warranty are provided by SMA Technologies for this project and related material. The use of this project's files is on your own risk.
