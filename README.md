@@ -68,14 +68,6 @@ The SMA_CheckIdentityLimit.sql is called by the SMA Check Identity Limit Job. Th
 
 Note: For Windows Authentication, the Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL premissions for the Database.
 
-##### Job Environment Variables for SMA Check Identity Limit
-Three environment variables are required for the SMA Database Backup Job. 
-
-1. DatabaseName
-    * <ins>Global Property</ins> [[DatabaseName]] is recommended for the value.
-
-![Database Backup](/img/DatabaseBackup.png)
-
 **Note:** The Runner will be slightly different depending on whether OpCon is running on Windows or Docker/Linux. If it is run on Windows it will look like this:
 
 ![Database Backup Runner](/img/WindowsRunner.PNG)
