@@ -66,7 +66,7 @@ The SMA_CheckIdentityLimit.sql is called by the SMA Check Identity Limit Job. Th
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -d [[DatabaseName]] -h-1 -b
 ```
 
-Note: For Windows Authentication, the Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL premissions for the Database.
+Note: For Windows Authentication, the Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL permissions for the Database.
 
 **Note:** The Runner will be slightly different depending on whether OpCon is running on Windows or Docker/Linux. If it is run on Windows it will look like this:
 
@@ -82,7 +82,7 @@ The SMADB_Backup.sql is called by the SMA Databse Backup Job. The command line i
 ```
 
 The SMADB_Backup.sql is called by the SMA Databse Backup Job. The command line is listed below for Windows Authentication.
-Note: The Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL premissions for the Database.
+Note: The Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL permissions for the Database.
 
 ```
 -S [[DB_SERVER_NAME]] -h-1 -b
@@ -114,7 +114,7 @@ The SMADB_TLog_Backup.sql is called by the SMA Database Transaction Log Backup J
 ```
 
 The SMADB_TLog_Backup.sql is called by the SMA Database Transaction Log Backup Job. The command line is listed below for Windows Authentication.
-Note: The Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL premissions for the Database.
+Note: The Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL permissions for the Database.
 
 ```.
 -S [[DB_SERVER_NAME]] -h-1 -b
@@ -144,7 +144,7 @@ The SMA_DBCCMaint.sql is called by the SMA Database Maintenance Job. The command
 ```
 
 The SMA_DBCCMaint.sql is called by the SMA Database Maintenance Job. The command line is listed below for Windows Authentication.
-Note: The Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL premissions for the Database.
+Note: The Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL permissions for the Database.
 
 ```
 -S [[DB_SERVER_NAME]] -h-1 -b
@@ -172,7 +172,7 @@ The SMA_DBCCIndexDefrag.sql is called by the SMA DBCC Index Defrag Job. The comm
 ```
 
 The SMA_DBCCIndexDefrag.sql is called by the SMA DBCC Index Defrag Job. The command line is listed below for Windows Authentication.
-Note: The Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL premissions for the Database.
+Note: The Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL permissions for the Database.
 
 ```
 -S [[DB_SERVER_NAME]] -b
@@ -200,7 +200,7 @@ The SMA_IndexDefragmentation.sql is called by the SMA Index Defragmentation Job.
 ```
 
 The SMA_IndexDefragmentation.sql is called by the SMA Index Defragmentation Job. The command line is listed below for Windows Authentication.
-Note: The Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL premissions for the Database.
+Note: The Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL permissions for the Database.
 
 ```
 -S [[DB_SERVER_NAME]] -b
@@ -232,7 +232,7 @@ sqlcmd -S[[DB_SERVER_NAME]] -U[[SqlMaintUser]] -P[[SqlMaintPassword]] -Q"exec [[
 ```
 
 The command line is listed below for Windows Authentication.
-Note: The Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL premissions for the Database.
+Note: The Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL permissions for the Database.
 ```
 sqlcmd -S[[DB_SERVER_NAME]] -Q"exec [[DatabaseName]].dbo.SMA_JOBAVG"
 ```
