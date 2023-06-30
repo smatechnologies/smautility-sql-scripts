@@ -58,6 +58,33 @@ A few Global Properties are referenced by the new Jobs. These need to be created
     * <ins>Example</ins>: C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Backup\SMATLog_Backup.bak
 
 
+### SMA Check Identity Limit (SMA_CheckIdentityLimit.sql)
+The SMA_CheckIdentityLimit.sql is called by the SMA Check Identity Limit Job. The command line is listed below for SQL Authentication.
+
+```
+-S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -d [[DatabaseName]] -h-1 -b
+```
+
+The SMADB_Backup.sql is called by the SMA Databse Backup Job. The command line is listed below for Windows Authentication.
+Note: The Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL premissions for the Database.
+
+```
+-S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -d [[DatabaseName]] -h-1 -b
+```
+
+##### Job Environment Variables for SMA Database Backup
+Three environment variables are required for the SMA Database Backup Job. 
+
+1. DatabaseName
+    * <ins>Global Property</ins> [[DatabaseName]] is recommended for the value.
+
+![Database Backup](/img/DatabaseBackup.png)
+
+**Note:** The Runner will be slightly different depending on whether OpCon is running on Windows or Docker/Linux. If it is run on Windows it will look like this:
+
+![Database Backup Runner](/img/WindowsRunner.PNG)
+
+
 ### SMA Database Backup (SMADB_Backup.sql)
 The SMADB_Backup.sql is called by the SMA Databse Backup Job. The command line is listed below for SQL Authentication.
 
