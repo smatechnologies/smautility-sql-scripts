@@ -66,7 +66,7 @@ The SMA_CheckIdentityLimit.sql is called by the SMA Check Identity Limit Job. Th
 -S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -d [[DatabaseName]] -h-1 -b
 ```
 
-Note: For Windows Authentication, the Batch user assigned to the job must be an Windows account DomainName\UserName and have SQL permissions for the Database.
+Note: For Windows Authentication, the Batch user assigned to the job must be a Windows account DomainName\UserName and have SQL permissions for the Database.
 
 ##### Job Environment Variables for SMA Database Backup
 One environment variable is required for the SMA Check Identity Limit Job. 
