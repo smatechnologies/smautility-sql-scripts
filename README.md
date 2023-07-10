@@ -59,7 +59,7 @@ A few Global Properties are referenced by the new Jobs. These need to be created
 
 ---
 
-### SMA Check Identity Limit (SMA_CheckIdentityLimit.sql)
+### SMA Check Identity Limit (SMA_CheckIdentityLimit.sql) (OpCon versions 22.6.0+)
 The SMA_CheckIdentityLimit.sql is called by the SMA Check Identity Limit Job. The command line is listed below for SQL Authentication.
 
 ```
