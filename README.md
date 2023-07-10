@@ -78,6 +78,25 @@ One environment variable is required for the SMA Check Identity Limit Job.
 
 ---
 
+### SMA Check Identity Limit (SMA_CheckIdentityLimit.sql) (OpCon versions 22.6.0+)
+The SMA_CheckIdentityLimit.sql is called by the SMA Check Identity Limit Job. The command line is listed below for SQL Authentication.
+
+```
+-S [[DB_SERVER_NAME]] -U [[SQLMaintUser]] -P [[SQLMaintPassword]] -d [[DatabaseName]] -h-1 -b
+```
+
+Note: For Windows Authentication, the Batch user assigned to the job must be a Windows account DomainName\UserName and have SQL permissions for the Database.
+
+##### Job Environment Variables for SMA Database Backup
+One environment variable is required for the SMA Check Identity Limit Job. 
+
+1. DatabaseName
+    * <ins>Global Property</ins> [[DatabaseName]] is recommended for the value.
+
+![Database Backup Runner](/img/CheckIdentityLimit.png)
+
+---
+
 ### SMA Database Backup (SMADB_Backup.sql)
 The SMADB_Backup.sql is called by the SMA Databse Backup Job. The command line is listed below for SQL Authentication.
 
